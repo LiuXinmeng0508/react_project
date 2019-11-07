@@ -10,19 +10,43 @@ export default class Home extends Component {
     this.state = {
       postList: [],
       tagType: '',
-      page:''
+      page:'',
+      api:'https://cnodejs.org/api/v1/topics/',
     };
   }
+  tagType = (tag) =>{
+      if(tag = '全部'){
+        tag = 'all';
+      }else if(tag = '精华'){
+        tag = 'good';
+      }else if(tag = '分享'){
+        tag = 'share';
+      }else if(tag = '问答'){
+        tag = 'ask';
+      }else if(tag = '招聘'){
+        tag = 'job';
+      }
+    this.setState({
+      tagType:tag
+    },()=>{
+      console.log(this.state.tagType)
+    })
+  }
   componentDidMount(){
-    fetch('https://cnodejs.org/api/v1/topics?tab=all')
+    fetch(this.state.api)
     .then((res)=>res.json())
     .then((res)=>{
-        this.setState({postList:res.data})
+        res.data.map((item)=>{
+          this.setState({
+              postList:res.data
+          })
+      })
     });
   }
-  componentDidUpdate(prevState,prevProps){
-    if(prevProps.tagType == this.state.tagType && prevProps.page !== this.state.page){
-      fetch('https://cnodejs.org/api/v1/topics?tab='+this.state.tagType+'&page='+this.state.page)
+  componentDidUpdate(a,b){
+    var url = 'https://cnodejs.org/api/v1/topics/?tab=all&page='+this.state.page;
+    if(b.tagType == this.state.tagType && b.page !== this.state.page){
+      fetch(url)
       .then((res)=>res.json())
       .then((res)=>{
           this.setState({postList:res.data})
@@ -35,32 +59,6 @@ export default class Home extends Component {
       });
     }
   }
-  tagType = (tag)=>{
-    switch(tag){
-      case '全部':
-          tag = 'all';
-          break;
-      case '精华':
-          tag = 'good';
-          break;
-      case '分享':
-          tag = 'share';
-          break;
-      case '问答':
-          tag = 'ask';
-          break;
-      case '招聘':
-          tag = 'job';
-          break;
-      default:
-          break;
-  }
-    this.setState({
-      tagType:tag
-    },()=>{
-      console.log(this.state.tagType)
-    })
-  }
   pagesType = (idx)=>{
     this.setState({
       page:idx
@@ -68,7 +66,7 @@ export default class Home extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="homeAll">
         <div getTab={this.tagType} className="homeHeader">
               {
                   ['全部','精华','分享','问答','招聘'].map((res)=>(
@@ -77,6 +75,7 @@ export default class Home extends Component {
               }
         </div>
         <div>{
+          // error
           this.state.postList.map((res)=>(
             <ul>
               <li>
@@ -85,6 +84,7 @@ export default class Home extends Component {
                 <span>{res.tab}</span>
                 <Link to={'/detail/'+res.id}></Link>
                 <span>刚刚</span>
+                <img src={res.author.avatar_url} alt=""/>
               </li>
             </ul>
           ))
