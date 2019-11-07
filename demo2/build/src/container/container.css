@@ -1,0 +1,85 @@
+.entrance{
+    float: right;
+    width: 290px;
+    height: 120px;
+    background-color: white;
+    margin-left: 10px;
+    padding-top: 7px;
+    padding-left: 8px;
+  }
+  .entrance form span{
+    padding-top: 6px;
+    padding-bottom: 3px;
+  }
+  .entrance button{
+    margin-top: 20px;
+    font-size: 15px;
+    background-color: #5bc0de;
+    border:1px solid #ddd;
+    border-radius: 4px;
+    height: 34px;
+    color:white;
+    transition: all .2s ease-in-out;
+  }
+  .pagbtn{
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+  .pages{
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border: 1px solid rgb(209, 209, 209);
+  }
+  .homeHeader{
+      margin-left: 20px;
+      margin-top: 10px;
+  }
+  .topic_tab{
+    border-radius: 5px;
+    color: rgb(128, 189, 8);
+    background-color: rgb(246, 246, 246);
+    border: none;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .topic_tab:active{
+      background-color: rgb(128, 189, 8);
+      color: white;
+  }
+  .user{
+      margin-top: 30px;
+  }
+  .user input{
+      width: 280px;
+      height: 30px;
+      margin-left: 18px;
+      border: 1px rgb(133, 133, 133);
+  }
+  .user span{
+      margin-left: 60px;
+      width: 60px;
+  }
+  .pwd{
+      margin-top: 20px;
+  }
+  .pwd input{
+      width: 280px;
+      height: 30px;
+      margin-left: 33px;
+      border: 1px rgb(133, 133, 133);
+      border-radius: 5px;
+  }
+  .pwd span{
+      margin-left: 60px;
+      width: 60px;
+  }
+  .formcont button{
+      width: 50px;
+      height: 35px;
+      background-color: rgb(0, 136, 204);
+      color: white;
+      border-radius: 7px;
+      margin-top: 40px;
+      margin-left: 230px;
+  }

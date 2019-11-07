@@ -1,0 +1,45 @@
+@import '~antd/dist/antd.css';
+*{
+  padding: 0;
+  margin: 0;
+}
+ul,li{
+  list-style: none;
+}
+body{
+  background-color: #ddd;
+}
+/*header*/
+.headerwrap{
+  height: 50px;
+  background-color: #444;
+}
+.headerwrap header{
+  width: 1200px;
+  margin: 0 auto;
+}
+.headerwrap img{
+  width: 120px;
+  margin-top: 8px;
+}
+.headerwrap a{
+  margin: 0 20px;
+  color: #fff;
+}
+/*main*/
+.main{
+  width: 1200px;
+  margin: 30px auto;
+}
+.content{
+  width: 900px;
+  float: left;
+  border: 1px solid gray;
+  background-color: #f6f6f6;
+}
+.sider{
+  width: 270px;
+  height: 500px;
+  float: right;
+  background-color: green;
+}
