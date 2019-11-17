@@ -1,0 +1,132 @@
+.App {
+  text-align: center;
+  background-color: #e5e5e5;
+}
+
+/* .App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+} */
+
+.searchBar{
+  width: 150px;
+  height: 50%;
+  border-radius:10px;
+  border: none;
+  font-size: 12px;
+}
+.searchBar::-webkit-input-placeholder{
+  padding-left: 13px;
+  font-size: 13px;
+}
+
+/* 菜单 */
+.single-foo-menu {
+  position: absolute;
+  z-index: 90 !important;
+  width: 100%;
+}
+
+.single-menu-active .single-top-nav-bar{
+  z-index: 90;
+}
+
+.single-top-nav-bar {
+  position: relative;
+  background-color: #008AE6;
+  color: #FFF;
+}
+.am-navbar-title {
+  color: #FFF!important;
+}
+.HomeTap{
+  overflow: hidden;
+}
+.Carousel_Grid{
+  margin-top: 10px;
+  height: 100%;
+}
+.ad{
+  margin-top: 10px;
+  width: 100%;
+}
+.ad tr{
+  width: 320px;
+  height: 70px;
+}
+.ad tr td{
+  background-color: #17d0a3;
+  text-align: center;
+  vertical-align: middle;
+  border: 3px solid #17d0a3;
+}
+.shopList{
+  margin-top: 10px;
+}
+.span2{
+  float: right;
+}
+.shopList_t tr td{
+  text-align: center;
+  vertical-align: middle;
+}
+.addr table td{
+  width: 150px;
+  text-align: center;
+}
+.shop_title{
+  font-size: 25px;
+}
+.shopDetails ul li{
+  float: left;
+  list-style: none;
+}
+.topRed{
+  width: 100%;
+  background-color: red;
+  padding-top: 20px;
+  color: #FFF;
+}
+.Homepic{
+  margin-left: 43%;
+}
+.mineData{
+  margin-top: 20px;
+  background-color: #c00904;
+  height: 30px;
+}
+.mineData td{
+  width: 150px;
+  text-align: center;
+}
+.HomeTel{
+  position: relative;
+  left: 30%;
+}
+.HomeList{
+  width: 100%;
+  margin-top: 15px;
+}
+.HomeList tr{
+  height: 50px;
+}
+.moreUl{
+  width: 100%;
+}
+.moreUl tr{
+  height: 50px;
+}
